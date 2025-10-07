@@ -27,7 +27,7 @@ export default function Contact() {
     setSuccess(false);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/contact", {
+      const response = await fetch("http://127.0.0.1:8000/contact/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +86,7 @@ export default function Contact() {
                     <h4 className="font-semibold text-gray-900 mb-1">Adres</h4>
                     <p className="text-gray-600">
                       Kaptan Paşa Mahallesi, Zincirlikuyu Caddesi<br />
-                      Ün NO:169 İş Merkezi, Kasımpaşa / İstanbul
+                      Ün İş Merkezi NO:169, Kasımpaşa / İstanbul
                     </p>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function Contact() {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
               <h4 className="font-semibold text-gray-900 mb-2">Çalışma Saatleri</h4>
               <div className="space-y-1 text-gray-600">
-                <p>7 Gün 24 Saat Hizmetinizdeyiz.</p>
+                <p>Haftanın 7 günü, 24 saat boyunca sizlere hizmet sunmaktayız.</p>
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function Contact() {
               {success && (
                 <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
-                  Mesajınız başarıyla gönderildi!
+                  Mesajınız başarıyla gönderildi!Mail olarak en kısa sürede dönüş yapılacaktır.
                 </div>
               )}
 

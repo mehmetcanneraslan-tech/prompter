@@ -94,7 +94,7 @@ export default function About() {
               <div className="text-blue-100">Tamamlanan Proje</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">15+</div>
+              <div className="text-4xl font-bold mb-2">20+</div>
               <div className="text-blue-100">Yıllık Deneyim</div>
             </div>
           </div>
