@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Monitor className="w-8 h-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">Focus Prompter</span>
+            <span className="text-xl font-bold text-gray-900">Fokus Prompter</span>
           </div>
 
           <div className="hidden md:flex gap-8">
@@ -22,24 +22,23 @@ export default function Header() {
             >
               Ana Sayfa
             </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-            >
-              Hakkımızda
-            </button>
-            <button
-              onClick={() => scrollToSection('faq')}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-            >
-              SSS
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-            >
-              İletişim
-            </button>
+            <nav className="flex space-x-4">
+              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">
+                Hakkımızda
+              </a>
+              <a
+                href="#projects"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+              >
+                Yaptığımız İşler
+              </a>
+              <a href="#faq" className="text-gray-700 hover:text-blue-600 transition-colors">
+                SSS
+              </a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+                İletişim
+              </a>
+            </nav>
           </div>
         </div>
       </nav>

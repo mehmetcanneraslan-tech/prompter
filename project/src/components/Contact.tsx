@@ -117,7 +117,9 @@ export default function Contact() {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
               <h4 className="font-semibold text-gray-900 mb-2">Çalışma Saatleri</h4>
               <div className="space-y-1 text-gray-600">
-                <p>Haftanın 7 günü, 24 saat boyunca sizlere hizmet sunmaktayız.</p>
+                <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                <p>Cumartesi: 10:00 - 16:00</p>
+                <p>Pazar: Kapalı</p>
               </div>
             </div>
           </div>

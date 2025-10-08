@@ -53,8 +53,8 @@ export default function Hero() {
               <div className="bg-white rounded-lg p-6 space-y-4">
                 <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                    alt="Profesyonel Prompter Sistemi - Kamera ve Teleprompter Kurulumu"
+                    src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Profesyonel Prompter Sistemi"
                     className="w-full h-full object-cover"
                   />
                 </div>

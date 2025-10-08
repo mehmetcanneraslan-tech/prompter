@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Monitor className="w-6 h-6 text-blue-500" />
-              <span className="text-xl font-bold text-white">Focus Prompter</span>
+              <span className="text-xl font-bold text-white">Fokus Prompter</span>
             </div>
             <p className="text-sm leading-relaxed">
               Profesyonel prompter operatörlük hizmetleriyle etkinliklerinizde
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Focus Prompter. Tüm hakları saklıdır.</p>
+          <p>&copy; {new Date().getFullYear()} Fokus Prompter. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>

@@ -5,7 +5,7 @@ const faqs = [
   {
     id: 1,
     question: 'Prompter operatörü nedir?',
-    answer: 'Prompter operatörü, etkinliklerinizde veya çekimlerinizde prompter sistemini kuran, işleten ve yöneten profesyonel kişidir. Konuşmacının metinleri rahatça okuyabilmesi için hızı ayarlar, teknik aksaklıkları giderir ve tüm süreci yönetir. Focus Prompter olarak, hem ekipmanı hem de deneyimli operatörü bir arada sunuyoruz.'
+    answer: 'Prompter operatörü, etkinliklerinizde veya çekimlerinizde prompter sistemini kuran, işleten ve yöneten profesyonel kişidir. Konuşmacının metinleri rahatça okuyabilmesi için hızı ayarlar, teknik aksaklıkları giderir ve tüm süreci yönetir. Fokus Prompter olarak, hem ekipmanı hem de deneyimli operatörü bir arada sunuyoruz.'
   },
   {
     id: 2,
