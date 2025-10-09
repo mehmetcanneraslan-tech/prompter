@@ -2,7 +2,7 @@ import { Monitor, Play, Camera } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+  <section id="home" className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -24,13 +24,13 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-200"
               >
                 Hemen İletişime Geçin
               </button>
               <button
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-lg font-medium border-2 border-gray-200 transition-all"
+                className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-medium border-2 border-gray-200 transition-all"
               >
                 Daha Fazla Bilgi
               </button>
@@ -49,13 +49,14 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-2xl">
-              <div className="bg-white rounded-lg p-6 space-y-4">
+              <div className="relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-8 shadow-2xl">
+              <div className="bg-white rounded-xl p-6 space-y-4 shadow-md transition-all duration-300">
                 <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
                   <img
-                    src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src="/images/image.png"
                     alt="Profesyonel Prompter Sistemi"
                     className="w-full h-full object-cover"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/images/prompter-placeholder.svg'; }}
                   />
                 </div>
                 <div className="space-y-2">

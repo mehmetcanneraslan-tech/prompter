@@ -60,19 +60,17 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={faq.id}
-                className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 group"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 group bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
                 >
-                  <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                    {faq.question}
-                  </span>
+                  <span className="font-semibold text-white">{faq.question}</span>
                   {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-white flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                    <ChevronDown className="w-5 h-5 text-white flex-shrink-0" />
                   )}
                 </button>
 

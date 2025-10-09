@@ -20,35 +20,35 @@ export default function Header() {
               <button
                 onClick={() => scrollToSection('home')}
                 aria-current="page"
-                className={`px-4 py-2 rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white active:bg-blue-600 active:text-white transition-colors duration-150 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-200`}
+                className={`px-4 py-2 rounded-xl bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-600 transition-all duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-200`}
               >
                 Ana Sayfa
               </button>
 
               <a
                 href="#about"
-                className={`inline-flex items-center px-4 py-2 rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white active:bg-blue-600 active:text-white transition-colors duration-150 shadow-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
+                className={`inline-flex items-center px-4 py-2 rounded-xl bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-600 transition-all duration-300 shadow-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
               >
                 Hakkımızda
               </a>
 
               <a
                 href="#projects"
-                className={`inline-flex items-center px-4 py-2 rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white active:bg-blue-600 active:text-white transition-colors duration-150 shadow-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
+                className={`inline-flex items-center px-4 py-2 rounded-xl bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-600 transition-all duration-300 shadow-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
               >
                 Yaptığımız İşler
               </a>
 
               <a
                 href="#faq"
-                className={`inline-flex items-center px-4 py-2 rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white active:bg-blue-600 active:text-white transition-colors duration-150 shadow-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
+                className={`inline-flex items-center px-4 py-2 rounded-xl bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-600 transition-all duration-300 shadow-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
               >
                 SSS
               </a>
 
               <a
                 href="#contact"
-                className={`inline-flex items-center px-4 py-2 rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-500 hover:text-white active:bg-blue-600 active:text-white transition-colors duration-150 shadow-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
+                className={`inline-flex items-center px-4 py-2 rounded-xl bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-600 transition-all duration-300 shadow-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-200`}
               >
                 İletişim
               </a>

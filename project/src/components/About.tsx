@@ -2,7 +2,7 @@ import { Award, Users, Headphones, Zap } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <section id="about" className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-5xl font-extrabold text-gray-900 mb-6">Hakkımızda</h2>
@@ -30,10 +30,10 @@ export default function About() {
 
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-900">Neden Biz?</h3>
-            <div className="space-y-6">
+              <div className="space-y-6">
               <div className="flex gap-6 items-start">
-                <div className="bg-blue-100 p-4 rounded-xl shadow-md">
-                  <Award className="w-8 h-8 text-blue-600" />
+                <div className="bg-blue-500 hover:bg-blue-600 p-4 rounded-xl shadow-md transition-all duration-300">
+                  <Award className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-xl text-gray-900 mb-2">Profesyonel Ekipman</h4>
@@ -44,8 +44,8 @@ export default function About() {
               </div>
 
               <div className="flex gap-6 items-start">
-                <div className="bg-blue-100 p-4 rounded-xl shadow-md">
-                  <Users className="w-8 h-8 text-blue-600" />
+                <div className="bg-blue-500 hover:bg-blue-600 p-4 rounded-xl shadow-md transition-all duration-300">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-xl text-gray-900 mb-2">Deneyimli Kadro</h4>
@@ -56,8 +56,8 @@ export default function About() {
               </div>
 
               <div className="flex gap-6 items-start">
-                <div className="bg-blue-100 p-4 rounded-xl shadow-md">
-                  <Headphones className="w-8 h-8 text-blue-600" />
+                <div className="bg-blue-500 hover:bg-blue-600 p-4 rounded-xl shadow-md transition-all duration-300">
+                  <Headphones className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-xl text-gray-900 mb-2">7/24 Teknik Destek</h4>
@@ -68,8 +68,8 @@ export default function About() {
               </div>
 
               <div className="flex gap-6 items-start">
-                <div className="bg-blue-100 p-4 rounded-xl shadow-md">
-                  <Zap className="w-8 h-8 text-blue-600" />
+                <div className="bg-blue-500 hover:bg-blue-600 p-4 rounded-xl shadow-md transition-all duration-300">
+                  <Zap className="w-8 h-8 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-xl text-gray-900 mb-2">Hızlı Mobilizasyon</h4>

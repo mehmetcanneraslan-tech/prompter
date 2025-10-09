@@ -60,7 +60,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+  <section id="contact" className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">İletişim</h2>
@@ -79,8 +79,8 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-blue-600" />
+                  <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl transition-all duration-300 shadow-md">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Adres</h4>
@@ -92,8 +92,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-blue-600" />
+                  <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl transition-all duration-300 shadow-md">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Telefon</h4>
@@ -103,8 +103,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-blue-600" />
+                  <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl transition-all duration-300 shadow-md">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">E-posta</h4>
@@ -114,7 +114,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 shadow-md transition-all duration-300">
               <h4 className="font-semibold text-gray-900 mb-2">Çalışma Saatleri</h4>
               <div className="space-y-1 text-gray-600">
                 <p>Pazartesi - Cuma: 09:00 - 18:00</p>
@@ -217,7 +217,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                className="w-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>İşleniyor...</>
