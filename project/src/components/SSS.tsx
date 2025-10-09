@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 type FaqItem = { id: number; question: string; answer: string; };
 
