@@ -90,7 +90,7 @@ export default function Chat() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed right-6 bottom-6 z-50 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300"
+          className="fixed right-6 bottom-6 z-50 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-500 via-brand-400 to-accent-400 px-5 py-3 text-sm font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:shadow-lg"
         >
           Chat Asistanı
         </button>
@@ -101,51 +101,63 @@ export default function Chat() {
         <div
           ref={windowRef}
           style={containerStyle}
-          className="fixed z-50 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
+          className="fixed z-50 flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white/95 shadow-soft backdrop-blur"
         >
           <div
             onMouseDown={startDrag}
-            className="flex items-center justify-between px-3 py-2 bg-blue-500 text-white cursor-grab"
+            className="flex cursor-grab items-center justify-between bg-surface px-4 py-2 text-white"
           >
             <div className="font-semibold">Chat Asistanı</div>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setOpen(false)}
-                className="w-7 h-7 rounded-full bg-white text-blue-600 flex items-center justify-center font-bold hover:bg-gray-100"
+                className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
               >
                 ×
               </button>
             </div>
           </div>
 
-          <div className="flex-1 overflow-auto p-3 space-y-3 bg-gray-50">
+          <div className="flex-1 space-y-3 overflow-auto bg-slate-50 p-3">
             {messages.map((m) => (
               <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[80%] px-3 py-2 rounded-lg ${m.role === 'user' ? 'bg-blue-500 text-white' : 'bg-white text-gray-900 shadow-sm'}`}>
-                  <div className="text-xs font-semibold mb-1">{m.role === 'user' ? 'Siz' : 'Asistan'}</div>
+                <div
+                  className={`max-w-[80%] rounded-2xl px-4 py-3 text-sm ${
+                    m.role === 'user'
+                      ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-white shadow-soft'
+                      : 'border border-slate-200 bg-white text-slate-800 shadow-soft'
+                  }`}
+                >
+                  <div
+                    className={`mb-1 text-[10px] font-semibold uppercase tracking-[0.3em] ${
+                      m.role === 'user' ? 'text-white/70' : 'text-brand-500'
+                    }`}
+                  >
+                    {m.role === 'user' ? 'Siz' : 'Asistan'}
+                  </div>
                   <div className="whitespace-pre-wrap">{m.text}</div>
                 </div>
               </div>
             ))}
 
-            {loading && <div className="text-center text-gray-500">Yükleniyor...</div>}
+            {loading && <div className="text-center text-slate-400">Yükleniyor...</div>}
 
             <div ref={endRef} />
           </div>
 
-          <div className="p-3 border-t border-gray-200 bg-white">
+          <div className="border-t border-slate-200 bg-white/90 p-3">
             <div className="flex gap-2">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => { if (e.key === 'Enter') sendMessage(); }}
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-200"
+                className="flex-1 rounded-xl border border-slate-200 px-3 py-2 text-slate-700 transition focus:border-brand-300 focus:outline-none focus:ring-4 focus:ring-brand-100"
                 placeholder="Mesajınızı yazın..."
               />
               <button
                 onClick={sendMessage}
                 disabled={loading}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg"
+                className="rounded-xl bg-gradient-to-r from-brand-500 to-accent-400 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:shadow hover:brightness-105 disabled:opacity-60"
               >
                 Gönder
               </button>

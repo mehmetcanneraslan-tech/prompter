@@ -13,26 +13,32 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-5xl font-extrabold text-gray-900 mb-6">Yaptığımız İşler</h2>
+    <section id="projects" className="bg-slate-100/80 py-24">
+      <div className="container">
+        <div className="mx-auto mb-16 max-w-4xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-600 shadow">
+            Seçili Projeler
+          </span>
+          <h2 className="mt-6 text-4xl md:text-5xl text-slate-900">Yaptığımız İşler</h2>
+          <p className="mt-4 text-lg text-slate-600">
+            Türkiye genelindeki etkinlikler ve canlı yayınlar için uçtan uca prompter çözümleri.
+          </p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white/90 shadow-soft transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-700">{project.description}</p>
+                <h3 className="text-2xl font-semibold text-slate-900">{project.title}</h3>
+                <p className="mt-2 text-slate-600">{project.description}</p>
               </div>
             </div>
           ))}

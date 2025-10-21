@@ -20,7 +20,7 @@ const faqs = [
   {
     id: 4,
     question: 'Fiyatlandırma nasıl yapılıyor?',
-    answer: 'Fiyatlandırmamız etkinliğin süresi, lokasyonu, ekipman ihtiyacı ve hizmet kapsamına göre değişmektedir. Yarım günlük, tam günlük veya saatlik paketlerimiz mevcuttur. Detaylı fiyat teklifi için lütfen bizimle iletişime geçin. Size özel paket hazırlamaktan memnuniyet duyarız.'
+    answer: 'Fiyatlandırmamız etkinliğin süresi, lokasyonu, ekipman ihtiyacı ve hizmet kapsamına göre değişmektedir. Detaylı fiyat teklifi için lütfen bizimle iletişime geçin. Size özel paket hazırlamaktan memnuniyet duyarız.'
   },
   {
     id: 5,
@@ -42,40 +42,44 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <HelpCircle className="w-4 h-4" />
+    <section id="faq" className="py-24">
+      <div className="container">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-16 text-center">
+            <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700">
+              <HelpCircle className="h-4 w-4" />
               Sıkça Sorulan Sorular
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Merak Ettikleriniz
-            </h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+            <h2 className="text-4xl text-slate-900">Merak Ettikleriniz</h2>
+            <p className="mt-4 text-lg text-slate-600">
+              Prompter süreçleri ve hizmet kapsamımızla ilgili en çok sorulan soruları yanıtladık.
+            </p>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={faq.id}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className={`overflow-hidden rounded-3xl border transition-all duration-300 ${
+                  openIndex === index
+                    ? 'border-brand-200 bg-brand-50/60 shadow-soft'
+                    : 'border-slate-200 bg-white/90 hover:-translate-y-1 hover:shadow-lg'
+                }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 group bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                  className="group flex w-full items-center justify-between gap-4 px-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-200"
                 >
-                  <span className="font-semibold text-white">{faq.question}</span>
+                  <span className="text-lg font-semibold text-slate-900">{faq.question}</span>
                   {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 text-white flex-shrink-0" />
+                    <ChevronUp className="h-5 w-5 text-brand-600" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-white flex-shrink-0" />
+                    <ChevronDown className="h-5 w-5 text-slate-400 transition-transform duration-300 group-hover:-translate-y-0.5" />
                   )}
                 </button>
 
                 {openIndex === index && (
-                  <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                  <div className="border-t border-white px-6 pb-6 pt-4 text-slate-600">
                     {faq.answer}
                   </div>
                 )}

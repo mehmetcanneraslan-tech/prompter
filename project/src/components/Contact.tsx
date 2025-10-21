@@ -60,76 +60,74 @@ export default function Contact() {
   };
 
   return (
-  <section id="contact" className="py-20 bg-gradient-to-b from-blue-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">İletişim</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600">
+    <section id="contact" className="py-24">
+      <div className="container">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-brand-700">
+            İletişime Geçin
+          </span>
+          <h2 className="mt-6 text-4xl text-slate-900">Bize Ulaşın</h2>
+          <p className="mt-4 text-lg text-slate-600">
             Sorularınız için bize ulaşın. Size en kısa sürede geri dönüş yapalım.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                İletişim Bilgileri
-              </h3>
+              <h3 className="text-2xl font-semibold text-slate-900">İletişim Bilgileri</h3>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl transition-all duration-300 shadow-md">
-                    <MapPin className="w-6 h-6 text-white" />
+              <div className="mt-6 space-y-5">
+                <div className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-soft">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow-soft">
+                    <MapPin className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Adres</h4>
-                    <p className="text-gray-600">
+                    <h4 className="font-semibold text-slate-900">Adres</h4>
+                    <p className="mt-1 text-slate-600">
                       Kaptan Paşa Mahallesi, Zincirlikuyu Caddesi<br />
                       Ün İş Merkezi NO:169, Kasımpaşa / İstanbul
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl transition-all duration-300 shadow-md">
-                    <Phone className="w-6 h-6 text-white" />
+                <div className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-soft">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow-soft">
+                    <Phone className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Telefon</h4>
-                    <p className="text-gray-600">+90 532 627 26 51</p>
-                    <p className="text-gray-600">+90 544 627 26 54</p>
+                    <h4 className="font-semibold text-slate-900">Telefon</h4>
+                    <p className="mt-1 text-slate-600">+90 532 627 26 51</p>
+                    <p className="text-slate-600">+90 544 627 26 54</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl transition-all duration-300 shadow-md">
-                    <Mail className="w-6 h-6 text-white" />
+                <div className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-soft">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow-soft">
+                    <Mail className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">E-posta</h4>
-                    <p className="text-gray-600">info@focusdestek.com.tr</p>
+                    <h4 className="font-semibold text-slate-900">E-posta</h4>
+                    <p className="mt-1 text-slate-600">info@focusdestek.com.tr</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 shadow-md transition-all duration-300">
-              <h4 className="font-semibold text-gray-900 mb-2">Çalışma Saatleri</h4>
-              <div className="space-y-1 text-gray-600">
-                <p>Pazartesi - Cuma: 09:00 - 18:00</p>
-                <p>Cumartesi: 10:00 - 16:00</p>
-                <p>Pazar: Kapalı</p>
+            <div className="rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-soft">
+              <h4 className="font-semibold text-slate-900">Çalışma Saatlerimiz</h4>
+              <div className="mt-3 space-y-1 text-slate-600">
+                <p>7/24 Hizmetinizdeyiz.</p>
               </div>
             </div>
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-soft">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="mb-2 block text-sm font-semibold text-slate-800"
                 >
                   Ad Soyad *
                 </label>
@@ -140,7 +138,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
                   placeholder="Adınız ve soyadınız"
                 />
               </div>
@@ -148,7 +146,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="mb-2 block text-sm font-semibold text-slate-800"
                 >
                   E-posta *
                 </label>
@@ -159,7 +157,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
                   placeholder="ornek@email.com"
                 />
               </div>
@@ -167,7 +165,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="mb-2 block text-sm font-semibold text-slate-800"
                 >
                   Telefon
                 </label>
@@ -177,7 +175,7 @@ export default function Contact() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
                   placeholder="+90 5XX XXX XX XX"
                 />
               </div>
@@ -185,7 +183,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="mb-2 block text-sm font-semibold text-slate-800"
                 >
                   Mesajınız *
                 </label>
@@ -196,34 +194,34 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
+                  className="w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
                   placeholder="Mesajınızı buraya yazın..."
                 ></textarea>
               </div>
 
               {error && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-red-700">
                   {error}
                 </div>
               )}
 
               {success && (
-                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5" />
-                  Mesajınız başarıyla gönderildi!Mail olarak en kısa sürede dönüş yapılacaktır.
+                <div className="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-700">
+                  <CheckCircle className="h-5 w-5" />
+                  Mesajınız başarıyla gönderildi! Mail olarak en kısa sürede dönüş yapılacaktır.
                 </div>
               )}
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 via-brand-400 to-accent-400 px-8 py-3 text-sm font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none disabled:hover:translate-y-0"
               >
                 {loading ? (
                   <>İşleniyor...</>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
+                    <Send className="h-5 w-5" />
                     Mesaj Gönder
                   </>
                 )}

@@ -2,27 +2,29 @@ import { Monitor, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
-  <footer className="bg-gray-900 text-gray-300 py-12">
-      <div className="container mx-auto px-4">
-  <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Monitor className="w-6 h-6 text-white" />
-              <span className="text-xl font-bold text-white">Fokus Prompter</span>
+    <footer className="relative overflow-hidden bg-surface py-16 text-slate-200">
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-900/30 via-transparent to-accent-900/10"></div>
+      <div className="container relative">
+        <div className="grid gap-12 md:grid-cols-3">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow-soft">
+                <Monitor className="h-6 w-6" />
+              </div>
+              <span className="font-display text-xl font-semibold text-white">Fokus Prompter</span>
             </div>
-            <p className="text-sm leading-relaxed">
-              Profesyonel prompter operatörlük hizmetleriyle etkinliklerinizde
-              güvenilir ortağınız.
+            <p className="text-sm leading-relaxed text-slate-300">
+              Profesyonel prompter operatörlük hizmetleriyle etkinliklerinizde güvenilir ortağınız.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Hızlı Bağlantılar</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">Hızlı Bağlantılar</h4>
+            <ul className="mt-5 space-y-2 text-sm text-slate-300">
               <li>
                 <button
                   onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   Ana Sayfa
                 </button>
@@ -30,7 +32,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   Hakkımızda
                 </button>
@@ -38,7 +40,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   SSS
                 </button>
@@ -46,7 +48,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   İletişim
                 </button>
@@ -54,26 +56,26 @@ export default function Footer() {
             </ul>
           </div>
 
-            <div>
-            <h4 className="text-white font-semibold mb-4">İletişim</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 text-white flex-shrink-0" />
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">İletişim</h4>
+            <ul className="mt-5 space-y-3 text-sm text-slate-300">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 text-brand-300" />
                 <span>Kaptan Paşa Mah., Zincirlikuyu Cad. Ün NO:169 İş Merkezi, Kasımpaşa/İstanbul</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-white" />
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-brand-300" />
                 <span>+90 532 627 26 51 / +90 544 627 26 54</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-white" />
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-brand-300" />
                 <span>info@focusdestek.com.tr</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-sm">
+        <div className="mt-12 border-t border-white/10 pt-8 text-center text-xs text-slate-500">
           <p>&copy; {new Date().getFullYear()} Fokus Prompter. Tüm hakları saklıdır.</p>
         </div>
       </div>

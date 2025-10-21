@@ -2,70 +2,85 @@ import { Monitor, Play, Camera } from 'lucide-react';
 
 export default function Hero() {
   return (
-  <section id="home" className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-              <Monitor className="w-4 h-4" />
+    <section id="home" className="relative overflow-hidden pt-32 pb-28">
+      <div className="absolute inset-0 bg-surface"></div>
+      <div className="absolute inset-0 bg-hero-glow"></div>
+      <div className="absolute inset-y-0 right-[-20%] w-[55%] rounded-full bg-gradient-to-br from-brand-500/30 via-accent-400/20 to-transparent blur-3xl"></div>
+
+      <div className="relative container">
+        <div className="grid items-center gap-16 md:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-8 text-slate-100">
+            <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-sm font-medium text-white/80 backdrop-blur">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow-soft">
+                <Monitor className="h-3.5 w-3.5" />
+              </span>
               Profesyonel Prompter Operatörlük Hizmeti
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-              Profesyonel Etkinliklerinizde
-              <span className="text-blue-600"> Prompter Operatörü</span>
+            <h1 className="text-4xl leading-tight text-white sm:text-5xl md:text-6xl">
+              Etkinliklerinizi <span className="text-brand-200">yüksek ritimde</span> yürütün,
+              sunumunuzu profesyonellere emanet edin.
             </h1>
 
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Etkinliklerinize profesyonel prompter ekipmanı ve deneyimli operatör desteği sağlıyoruz.
-              Kurulum, işletme ve teknik destek - her şey bizden.
+            <p className="max-w-xl text-lg leading-relaxed text-white/70 md:text-xl">
+              Kurulumdan canlı yayına kadar uçtan uca prompter hizmeti sunuyoruz.
+              Deneyimli operatörlerimiz ve broadcast standartlarındaki ekipmanlarımızla
+              kusursuz bir deneyim yaratıyoruz.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-200"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 via-brand-400 to-accent-400 px-7 py-3 text-sm font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-200"
               >
                 Hemen İletişime Geçin
               </button>
               <button
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-medium border-2 border-gray-200 transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-7 py-3 text-sm font-semibold text-white/80 backdrop-blur transition-colors hover:border-white/40 hover:text-white"
               >
                 Daha Fazla Bilgi
               </button>
             </div>
 
-            <div className="flex gap-8 pt-4">
-              <div className="flex items-center gap-2">
-                <Camera className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-gray-600">Profesyonel Ekipman</span>
+            <div className="flex flex-wrap gap-8 pt-4 text-sm text-white/65">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10">
+                  <Camera className="h-5 w-5 text-brand-200" />
+                </span>
+                <span>Broadcast seviyesinde ekipman parkuru</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Play className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-gray-600">Deneyimli Operatör</span>
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10">
+                  <Play className="h-5 w-5 text-brand-200" />
+                </span>
+                <span>15+ yıllık canlı yayın deneyimi</span>
               </div>
             </div>
           </div>
 
           <div className="relative">
-              <div className="relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-8 shadow-2xl">
-              <div className="bg-white rounded-xl p-6 space-y-4 shadow-md transition-all duration-300">
-                <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+            <div className="absolute -top-8 -left-8 hidden h-40 w-40 rounded-full bg-gradient-to-tr from-brand-400/40 to-accent-400/20 blur-3xl md:block"></div>
+            <div className="relative rounded-[32px] border border-white/10 bg-white/5 p-6 shadow-soft backdrop-blur">
+              <div className="space-y-6 rounded-3xl border border-white/10 bg-slate-950/60 p-6 shadow-inner">
+                <div className="aspect-video overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80">
                   <img
                     src="/images/image.png"
                     alt="Profesyonel Prompter Sistemi"
-                    className="w-full h-full object-cover"
-                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/images/prompter-placeholder.svg'; }}
+                    className="h-full w-full object-cover"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/images/prompter-placeholder.svg';
+                    }}
                   />
                 </div>
-                <div className="space-y-2">
-                  <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                  <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                <div className="space-y-3">
+                  <div className="h-2 rounded-full bg-white/20"></div>
+                  <div className="h-2 rounded-full bg-white/10"></div>
+                  <div className="h-2 w-2/3 rounded-full bg-white/10"></div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold shadow-lg">
-                Profesyonel Hizmet
+              <div className="absolute -bottom-6 right-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-emerald-500"></span> Hazır Kurulum
               </div>
             </div>
           </div>
