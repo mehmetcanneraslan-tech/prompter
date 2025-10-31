@@ -1,4 +1,17 @@
 {
+  "name": "prompter",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "prebuild": "npm ci --prefix project",
+    "build": "npm run build --prefix project",
+    "start": "npm run preview --prefix project -- --host 0.0.0.0 --port ${PORT:-3000}",
+    "dev": "npm run dev --prefix project",
+    "lint": "npm run lint --prefix project",
+    "typecheck": "npm run typecheck --prefix project"
+  },
   "dependencies": {
     "framer-motion": "^12.23.22",
     "react-router-dom": "^7.9.3"
