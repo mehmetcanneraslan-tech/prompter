@@ -5,7 +5,6 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
-import Chat from './components/Chat';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
       <FAQ />
       <Contact />
       <Footer />
-      <Chat />
     </div>
   );
 }
