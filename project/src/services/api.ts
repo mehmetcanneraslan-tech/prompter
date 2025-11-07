@@ -1,4 +1,4 @@
-const BASE_URL = 'batu-pfslc.ondigitalocean.app';
+const BASE_URL = 'https://batu-pfslc.ondigitalocean.app/';
 
 export async function sendChatMessage(message: string): Promise<ChatResponse> {
   const res = await fetch(`${BASE_URL}/chat`, {
