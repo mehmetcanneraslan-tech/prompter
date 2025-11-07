@@ -16,22 +16,29 @@ export default function Projects() {
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.list.map((project, index) => (
-            <div
-              key={project.title}
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white/90 shadow-soft transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              <img
-                src={`/images/proje${index + 1}.jpg`}
-                alt={project.title}
-                className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-slate-900">{project.title}</h3>
-                <p className="mt-2 text-slate-600">{project.description}</p>
+          {projects.list.map((project, index) => {
+            const imageSrc =
+              'image' in project && project.image
+                ? project.image
+                : `/images/proje${index + 1}.jpg`;
+
+            return (
+              <div
+                key={project.title}
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white/90 shadow-soft transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <img
+                  src={imageSrc}
+                  alt={project.title}
+                  className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold text-slate-900">{project.title}</h3>
+                  <p className="mt-2 text-slate-600">{project.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
